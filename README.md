@@ -1,14 +1,23 @@
-# Credit Card Default Prediction — Streamlit app
+# Credit Card Default Prediction website
 
-This Streamlit wrapper displays the existing responsive dashboard and its interactive model-metric selector. It embeds the local HTML page, CSS, and JavaScript, so no external web assets or model files are required.
+A static, responsive results dashboard based on `Credit_Card_Default_Prediction.ipynb`.
 
-## Deploy on Streamlit Community Cloud
+## Open locally
 
-1. Create a GitHub repository and upload this project's files, keeping `streamlit_app.py` and `requirements.txt` at the repository root.
-2. Go to https://share.streamlit.io and sign in with GitHub.
-3. Select **Create app**, then choose the repository, branch, and `streamlit_app.py` as the entrypoint.
-4. Deploy. Streamlit Community Cloud will install the pinned dependency from `requirements.txt` and provide an app URL.
+Open `index.html` in a modern browser. The site has no package installation or build step and works without a network connection. The Kaggle dataset link opens externally.
 
-Official docs: https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy
+## Files
 
-The dashboard shows the metrics recorded in the supplied notebook. It does not train or load a model, and it does not score new customers.
+- `index.html` — page structure and project content
+- `styles.css` — responsive layout and styling
+- `app.js` — interactive metric selector and model rankings
+
+## Saved notebook results
+
+| Model | Accuracy | Precision | Recall | ROC-AUC |
+| --- | ---: | ---: | ---: | ---: |
+| Logistic Regression | 0.8077 | 0.6868 | 0.2396 | 0.7076 |
+| Random Forest | 0.8148 | 0.6530 | 0.3474 | 0.7563 |
+| XGBoost | 0.8175 | 0.6620 | 0.3572 | 0.7782 |
+
+This site reports the saved evaluation. It does not load a trained model or predict for new customers.
